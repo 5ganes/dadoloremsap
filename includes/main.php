@@ -146,13 +146,17 @@
       <div id="text-4" class="widget-sidebar frontier-widget widget_text">
         <h4 class="widget-title">डाउनलोड्स</h4>
         <div class="textwidget">
+          <ul class="notice-list">
           <?php
           $download=$groups->getByParentId(PUBLICATION);
           while($downloadGet=$conn->fetchArray($download)){?>
+            <li>
             <a href="<?=CMS_FILES_DIR.$downloadGet['contents']?>" target="_blank">
               <?=$downloadGet['name'];?>
-            </a><br>
+            </a>
+            </li>
           <? }?>
+          </ul>
         </div>
       </div>
 

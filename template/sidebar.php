@@ -29,13 +29,19 @@
 		<div id="text-3" class="widget-sidebar frontier-widget widget_text">
 			<h4 class="widget-title">उपयोगी लिङ्क्स</h4>
 			<div class="textwidget">
+			<ul class="notice-list">
 				<?php
-				$links=$groups->getByParentId(LINKS);
+				$links=$groups->getByParentIdWithLimit(LINKS,5);
 				while($linksGet=$conn->fetchArray($links)){?>
+					<li>
 					<a href="<?=$linksGet['contents'];?>" title="<?=$linksGet['name']?>" target="_blank">
 						<?=$linksGet['name']?>
-					</a><br>
+					</a>
+					</li>
 				<?php }?>
+			</ul>
+			<?php $link=$conn->fetchArray($groups->getById(LINKS));?>
+			<a href="<?php echo $link['urlname'];?>"><em><strong>Read More...</strong></em></em></a>
 			</div>
 		</div>		
 	</div>
