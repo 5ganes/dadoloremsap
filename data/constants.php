@@ -5,7 +5,7 @@ define("ADMIN_LEFT_WIDTH", "20%");
 define("ADMIN_BODY_WIDTH", "80%");
 define("ADMIN_TITLE", "Admin Control Panel");
 define("PAGE_TITLE", "District Agriculture Development Office, Saptari");
-define("SITE_URL", "http://localhost/dadosaptari/");
+define("SITE_URL", "http://www.dadosaptari.gov.np/");
 
 
 ////////////////IMAGE FOLDER LOCATIONS////////////////////////
